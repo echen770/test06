@@ -6,7 +6,7 @@ import base64
 import traceback
 import io
 
-bp = func.Blueprint()
+bp_pdf = func.Blueprint()
 
 
 def merge_pdfs(files):
@@ -21,7 +21,7 @@ def merge_pdfs(files):
     return merged_pdf
 
 
-@bp.route(route="getmergedpdfs")
+@bp_pdf.route(route="getmergedpdfs")
 def get_merged_pdfs(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Python HTTP trigger function processed a request.")
 
